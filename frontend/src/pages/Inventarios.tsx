@@ -65,7 +65,7 @@ export function Inventarios() {
             <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e5e7eb" />
             <XAxis dataKey="date" tick={{ fontSize: 11, fill: '#6b7280' }} />
             <YAxis tickFormatter={(v) => `${(v / 1000).toFixed(0)}k`} tick={{ fontSize: 11, fill: '#6b7280' }} />
-            <Tooltip formatter={(value: number) => `${value.toLocaleString('es-MX')} L`} />
+            <Tooltip formatter={(value) => `${Number(value).toLocaleString('es-MX')} L`} />
             <Legend wrapperStyle={{ fontSize: 12 }} />
             <Line type="monotone" dataKey="magna" name="Magna" stroke="#2F6FED" strokeWidth={2.5} dot={false} />
             <Line type="monotone" dataKey="premium" name="Premium" stroke="#1E9E5A" strokeWidth={2.5} dot={false} />

@@ -64,7 +64,7 @@ export function Finanzas() {
             <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e5e7eb" />
             <XAxis dataKey="date" tick={{ fontSize: 11, fill: '#6b7280' }} />
             <YAxis tickFormatter={(v) => `${(v / 1000).toFixed(0)}k`} tick={{ fontSize: 11, fill: '#6b7280' }} />
-            <Tooltip formatter={(value: number) => currency(value)} />
+            <Tooltip formatter={(value) => currency(Number(value))} />
             <Legend wrapperStyle={{ fontSize: 12 }} />
             <Bar dataKey="entradas" name="Entradas" fill="#1E9E5A" radius={[6, 6, 0, 0]} />
             <Bar dataKey="salidas" name="Salidas" fill="#E5484D" radius={[6, 6, 0, 0]} />

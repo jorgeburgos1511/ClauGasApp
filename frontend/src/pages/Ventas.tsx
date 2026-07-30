@@ -122,7 +122,7 @@ export function Ventas() {
               <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e5e7eb" />
               <XAxis dataKey="date" tick={{ fontSize: 11, fill: '#6b7280' }} />
               <YAxis tickFormatter={(v) => `${(v / 1000).toFixed(0)}k`} tick={{ fontSize: 11, fill: '#6b7280' }} />
-              <Tooltip formatter={(value: number) => currency(value)} />
+              <Tooltip formatter={(value) => currency(Number(value))} />
               <Area type="monotone" dataKey="value" stroke="#2F6FED" strokeWidth={2.5} fill="url(#salesTrendFill)" />
             </AreaChart>
           </ResponsiveContainer>
@@ -136,7 +136,7 @@ export function Ventas() {
                   <Cell key={entry.product} fill={salesProductMixColors[entry.product]} />
                 ))}
               </Pie>
-              <Tooltip formatter={(value: number) => `${value}%`} />
+              <Tooltip formatter={(value) => `${Number(value)}%`} />
             </PieChart>
           </ResponsiveContainer>
           <div className="mt-2 flex flex-wrap justify-center gap-x-3 gap-y-1.5">
@@ -156,7 +156,7 @@ export function Ventas() {
             <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e5e7eb" />
             <XAxis dataKey="name" tick={{ fontSize: 11, fill: '#6b7280' }} interval={0} angle={-15} textAnchor="end" height={50} />
             <YAxis tickFormatter={(v) => `${(v / 1_000_000).toFixed(1)}M`} tick={{ fontSize: 11, fill: '#6b7280' }} />
-            <Tooltip formatter={(value: number) => currency(value)} />
+            <Tooltip formatter={(value) => currency(Number(value))} />
             <Legend wrapperStyle={{ fontSize: 12 }} />
             <Bar dataKey="Esta semana" fill="#2F6FED" radius={[6, 6, 0, 0]} />
             <Bar dataKey="Semana anterior" fill="#D1D5DB" radius={[6, 6, 0, 0]} />
