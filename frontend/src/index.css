@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "IBM Plex Sans", system-ui, sans-serif;
+
+  --color-navy: #0b2a4a;
+  --color-navy-light: #133a63;
+  --color-accent: #2f6fed;
+  --color-success: #1e9e5a;
+  --color-warning: #f2a93b;
+  --color-danger: #e5484d;
+  --color-app-bg: #f5f7fa;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-app-bg);
+  color: #1f2937;
+}
